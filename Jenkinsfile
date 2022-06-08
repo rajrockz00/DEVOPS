@@ -3,7 +3,10 @@ pipeline {
     stages {  
             stage ('Build') {  
                 steps {  
-                        echo 'Running build phase...'  
+                       script { 
+                     properties([authorizationMatrix(['hudson.model.Item.Build:multibranch-1'])]) 
+                     sh "echo matrix works!!" 
+                  } 
                 }  
             }  
     }  
