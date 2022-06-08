@@ -4,7 +4,7 @@ pipeline {
             stage ('Build') {  
                 steps {  
                        script { 
-                     properties([authorizationMatrix(['hudson.model.Item.Build:multibranch-1'])]) 
+                     properties([authorizationMatrix(['hudson.model.Item.Build:arun'])]) 
                      sh "echo matrix works!!" 
                   } 
                 }  
