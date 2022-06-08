@@ -9,5 +9,13 @@ pipeline {
                   } 
                 }  
             }  
+        stage ('Build') {  
+                steps {  
+                       script { 
+                           properties([authorizationMatrix(['hudson.model.Item.Read:arun'])]) 
+                           sh "echo matrix works!!" 
     }  
 }  
+        }
+    }
+}
