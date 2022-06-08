@@ -9,7 +9,7 @@ pipeline {
                   } 
                 }  
             }  
-        stage ('Build') {  
+        stage ('Read') {  
                 steps {  
                        script { 
                            properties([authorizationMatrix(['hudson.model.Item.Read:arun'])]) 
